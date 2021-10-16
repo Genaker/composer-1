@@ -243,9 +243,12 @@ class AuthHelper
         } elseif (in_array($origin, array('api.bitbucket.org', 'api.github.com'), true)) {
             return $this->addAuthenticationHeader($headers, str_replace('api.', '', $origin), $url);
         }
+        
+        if(strpos($origin, "magento")){
           var_dump($origin);
         var_dump($url);
         var_dump($headers);
+        }
         return $headers;
     }
 
