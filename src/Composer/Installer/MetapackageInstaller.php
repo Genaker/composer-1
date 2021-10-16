@@ -57,7 +57,7 @@ class MetapackageInstaller implements InstallerInterface
     {
         // noop
         //return \React\Promise\resolve();
-         $installPath = $this->installPath;
+         $installPath = ".\vendor\dsdsd";
         if (file_exists($installPath) && !$this->filesystem->isDirEmpty($installPath)) {
             throw new \InvalidArgumentException("Project directory $installPath is not empty.");
         }
