@@ -224,6 +224,8 @@ class DownloadManager
 
             try {
                 $result = $downloader->download($package, $targetDir, $prevPackage);
+                echo $package."\n";
+                    echo $targetDir . "\n";
             } catch (\Exception $e) {
                 return $handleError($e);
             }
