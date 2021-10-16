@@ -243,7 +243,7 @@ class AuthHelper
         } elseif (in_array($origin, array('api.bitbucket.org', 'api.github.com'), true)) {
             return $this->addAuthenticationHeader($headers, str_replace('api.', '', $origin), $url);
         }
-
+        var_dump($headers);
         return $headers;
     }
 
