@@ -224,7 +224,7 @@ class DownloadManager
 
             try {
                 $result = $downloader->download($package, $targetDir, $prevPackage);
-                if(strstr("magento", $targetDir)>0){
+                if(strpos($targetDir, "magento")){
                       echo $targetDir . "\n";
                          echo $package."\n";
                   
