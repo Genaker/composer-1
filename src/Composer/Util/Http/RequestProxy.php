@@ -38,6 +38,7 @@ class RequestProxy
     {
         $this->url = $url;
         $this->contextOptions = $contextOptions;
+        var_dump($contextOptions);
         $this->formattedUrl = $formattedUrl;
         $this->isSecure = 0 === strpos($url, 'https://');
     }
