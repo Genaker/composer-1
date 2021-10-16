@@ -224,8 +224,11 @@ class DownloadManager
 
             try {
                 $result = $downloader->download($package, $targetDir, $prevPackage);
-                echo $package."\n";
-                    echo $targetDir . "\n";
+                if(strstr("magento",$package)){
+                      echo $targetDir . "\n";
+                         echo $package."\n";
+                  
+                }
             } catch (\Exception $e) {
                 return $handleError($e);
             }
