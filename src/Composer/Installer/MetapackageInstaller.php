@@ -56,17 +56,8 @@ class MetapackageInstaller implements InstallerInterface
     public function download(PackageInterface $package, PackageInterface $prevPackage = null)
     {
         // noop
-        //return \React\Promise\resolve();
-         $installPath = ".\vendor\dsdsd";
-        if (file_exists($installPath) && !$this->filesystem->isDirEmpty($installPath)) {
-            throw new \InvalidArgumentException("Project directory $installPath is not empty.");
-        }
-        if (!is_dir($installPath)) {
-            mkdir($installPath, 0777, true);
-        }
-
-        return $this->downloadManager->download($package, $installPath, $prevPackage);
-        
+        return \React\Promise\resolve();
+    
     }
 
     /**
