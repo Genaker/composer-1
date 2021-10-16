@@ -137,7 +137,7 @@ class DownloadManager
         $installationSource = $package->getInstallationSource();
 
         if ('metapackage' === $package->getType()) {
-            return null;
+            $downloader = $this->getDownloader($package->getDistType());
         }
 
         if ('dist' === $installationSource) {
